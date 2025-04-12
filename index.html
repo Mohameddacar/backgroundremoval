@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Remover</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Background Remover</h1>
+            <p>Remove backgrounds from your images with one click</p>
+        </header>
+
+        <main>
+            <div class="upload-container">
+                <div class="drop-area" id="dropArea">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3>Drag & Drop your image here</h3>
+                    <p>or</p>
+                    <label for="fileInput" class="upload-btn">Choose File</label>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
+            </div>
+
+            <div class="preview-container" id="previewContainer" style="display: none;">
+                <div class="image-preview">
+                    <img id="previewImage" src="" alt="Preview">
+                </div>
+                <div class="controls">
+                    <button id="removeBgBtn" class="primary-btn">
+                        <i class="fas fa-magic"></i> Remove Background
+                    </button>
+                    <button id="downloadBtn" class="secondary-btn" disabled>
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                    <button id="resetBtn" class="secondary-btn">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                </div>
+            </div>
+
+            <div class="loading-container" id="loadingContainer" style="display: none;">
+                <div class="spinner"></div>
+                <p>Removing background...</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 Background Remover. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
